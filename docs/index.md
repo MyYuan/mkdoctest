@@ -61,9 +61,9 @@
 
 通过以下链接联系 PaddleDTX 团队：
 
-<img src='../../_static/discuss.png' width = "5%" height = "5%" align="middle" />
+<img src='../_static/discuss.png' width = "5%" height = "5%" align="middle" />
 [社区交流](https://developer.baidu.com/singleTagPage.html?tagId=269&type=QUESTION)  &emsp;
-<img src='../../_static/issue.png' width = "4%" height = "4%" align="middle" />
+<img src='../_static/issue.png' width = "4%" height = "4%" align="middle" />
 [Github Issues](https://github.com/PaddlePaddle/PaddleDTX/issues)
 
 
