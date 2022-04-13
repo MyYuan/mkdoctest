@@ -1,141 +1,107 @@
-site_name: PaddleDTX
+site_name: "PaddleDTX"
+docs_dir: documents
 theme:
   name: 'material'
+  logo: _static/logo.png
+  favicon: _static/logo.png
+  icon:
+    repo: fontawesome/brands/github
   palette:
-    primary: "light blue"
-    accent: "blue"
-  language: en
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
+    - scheme: slate
+      primary: "indigo"
+      accent: "grey" 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to light mode
+  language: zh
   features:
-    - navigation.tabs
-    - navigation.tabs.sticky
-    - navigation.sections
-edit_uri: docs/introduction
+    - navigation.instant
+    - navigation.top
+    - toc.integrate
+  font:
+    text: Lora
+    code: Roboto Mono
 repo_url: https://github.com/PaddlePaddle/PaddleDTX
 repo_name: PaddlePaddle/PaddleDTX
+edit_uri: tree/master/docs/source/
 nav:
-    - 介绍:
-        - 'What is PaddleDTX': 'index.md'
-        - 'Getting started with PaddleDTX': 'logistic.md'
-        - 'Need help?': 'logistic.md'
+    - Home: index.md
+    - 整体介绍:
+      - 系统介绍: 'introduction/introduction.md'
+      - 基本概念: 'introduction/concepts.md'
     - 快速入门:
-        - docker安装: 'quickstart.md'
-        - 编译安装 : 'compile-install.md'
-        - 客户端工具 : 'client.md' 
-        # - 'Styling your docs': './style/styling-your-docs.md'
-    - 系统架构:
-        - '线性回归': 'linear.md'
-        - '逻辑回归': 'logistic.md'
-    - 开发者集成:
-        - '线性回归': 'linear.md'
-        - '逻辑回归': 'logistic.md'
-    - 指南:
-        - '基础环境': 'linear.md'
-        - '安装部署': 'logistic.md'
-        - '命令行说明': 'logistic.md'
+      - 快速安装: 'quickstart/quickstart.md'
+      - 源码安装: 'quickstart/compile-install.md'
+      - docker安装: 'quickstart/docker-install.md'
+      - 客户端工具: 'quickstart/client.md' 
+    - 系统详解:
+      - 部署架构: 'details/framework.md'
+      - Distributed AI: 'details/DAI.md'
+      - XuperDB: 'details/XuperDB.md' 
+      - Crypto: 'details/crypto.md'
+    - 业务集成:
+      - NetWorks : 'development/networks.md'
+      - API: 'development/api.md'
+      - GRPC API: 'development/rpc.md'
+    - 教程:
+      - Distributed AI:
+        - 节点配置: 'tutorial/dai-config.md'
+        - 命令行操作: 'tutorial/dai-cmd.md'
+      - XuperDB:
+        - 节点配置: 'tutorial/xdb-config.md'
+        - 命令行操作: 'tutorial/xdb-cmd.md'
     - 项目案例:
-        - '线性回归': 'linear.md'
-        - '逻辑回归': 'logistic.md'
-
-    - ChangeLog:
-        - '功能迭代': 'linear.md'
+      - 线性回归 : 'projectcases/linear.md'
+      - 逻辑回归: 'projectcases/logistic.md'
+    - 其他:
+      - ChanageLog : 'others/changelog.md'
+      - 正在进行中: 'others/ongoing.md'
+      - 常见问题Issue: 'others/issues.md'
+      - 项目贡献: 'others/team.md'
+      - 加入我们: 'others/join.md'
+      - 参考资料: 'others/reference.md'
 extra:
-  version:
-    provider: mike
+  # version:
+  #   provider: mike
   alternate:
+    - name: 中文
+      link: /
+      lang: ch
     - name: English
       link: /en/ 
       lang: en
-    - name: 中文
-      link: /de/
-      lang: de
-  generator: false
-copyright: Copyright &copy; 2016 - 2020 Martin Donath
+  # generator: false
+copyright: Copyright &copy; 2022 Baidu PaddleDTX
 # Extensions
 markdown_extensions:
-  - abbr
-  - admonition
-  - attr_list
   - def_list
-  - footnotes
-  - meta
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:materialx.emoji.twemoji
+  - attr_list
   - md_in_html
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - pymdownx.critic
   - pymdownx.caret
   - pymdownx.keys
   - pymdownx.mark
-  - toc:
-      permalink: true
-  - pymdownx.arithmatex:
-      generic: true
-  - pymdownx.betterem:
-      smart_enable: all
-  - pymdownx.caret
-  - pymdownx.details
-  - pymdownx.emoji:
-      emoji_generator: !!python/name:materialx.emoji.to_svg
-      emoji_index: !!python/name:materialx.emoji.twemoji
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.keys
-  - pymdownx.magiclink:
-      repo_url_shorthand: true
-      user: squidfunk
-      repo: mkdocs-material
-  - pymdownx.mark
-  - pymdownx.smartsymbols
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.tabbed:
-      alternate_style: true
-  - pymdownx.tasklist:
-      custom_checkbox: true
   - pymdownx.tilde
-
-
-# 文档优化
-# 格式主题选择：
-# 当前使用的工具：
-    # sphinx：https://sphinx-themes.org/
-# mkdocs工具： 
-    # 主题：material： https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes； pip install mkdocs-material， 其他主题：https://github.com/mkdocs/mkdocs
-# gitbook 工具：
-    # https://www.chengweiyang.cn/gitbook/gitbook.com/config/theme.html
-# docsify 工具：
-    # https://github.com/docsifyjs/docsify/#showcase; https://docsify.js.org/#/zh-cn/quickstart
-# dumi工具：
-    # https://umijs.github.io/dumi-template/
-
-
-# 文档对比：https://blog.mimvp.com/article/38752.html
-# 升级点：
-# 功能目录/github跳转集成/语言切换/
-# 着重的功能点，升级的步骤、效果、文档丰富的功能点/模块的说明/文档内容的丰富度；
-# 
-# A、 主页：概述、能做什么？可以解决什么，快速入门？联系社区/团队（微信群、社区、github）？
-# B、 详细介绍：【重点强调的系统功能/架构】，-------------------- 我们的详解部分按照次规则拆分
-    # 1、开始使用（基本概念）；
-    # 2、安装：先决条件即机器配置要求、go加速等，mac安装/linux安装 
-    # 3、配置说明：不同地区节点的配置说明 
-    # 4、管理模块：命令行的使用（比如样本文件的上传）、服务的操作、升级、故障排除（启动失败时的故障排查）、命令行界面（概述）
-    # 5、项目贡献：代码、文档、社区、构建应用程序（程序集成）、协议设计、研究
-# C、开发者【重点强调集成】：-------------------- 但是集成方式但是很有参考价值，开发人员如何将PaddleDTX和自己的项目结合
-    # 1、节点（主网/测试网交互的的配置）、客户端安装、API接口集成；《这一部分对我们来说多余的》，
-    # 2、接口介绍，API接口的介绍、RPC API的介绍、API使用中的一些故障排查方法；
-    # 3、本地安装（二进制启动文件）、环境设置 《这一部分对我们来说多余的》；
-# D、存储提供商【针对我们的借鉴意义？】：-------------------- 我们的项目案例部分，应用场景
-    # 1、开始使用（基本概念）；
-    # 2、安装：先决条件即机器配置要求、go加速等，mac安装/linux安装 
-    # 3、配置说明：不同地区节点的配置说明 
-    # 4、管理模块：命令行的使用，服务的操作、升级、故障排除、命令行界面
-    # 5、项目贡献：代码、文档、社区、构建应用程序（程序集成）、协议设计、研究
-# E、教程【针对我们的借鉴意义？】：-------------------- 命令行详解部分，按照功能模块拆分
-    # 
-    # 
-    # 
-# F、知识库【用户报障的各种问题？】-------------------- 用户的问题，提的issue、未来的功能支持
-    # 关于环境、命令执行报错故障等问题罗列和解决方法
-    #
+extra_css:
+  - stylesheets/extra.css

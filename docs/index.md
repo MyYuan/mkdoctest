@@ -1,30 +1,70 @@
-# 系统介绍
-PaddleDTX，是一个基于{++去中心化存储++}的专注于{++分布式机器学习++}技术的解决方案，攻克海量隐私数据的安全存储问题，并且实现多方数据的安全交换，助其突破数据孤岛，共同建模，联合发挥数据的最大价值。
+# Home
+
+## 简介
+
+链桨是 **百度超级链** 与 **飞桨** 联合推出的首款 **产业级** 可信分布式AI开源产品。该产品基于区块链、去中心化存储、可信计算以及分布式机器学习等技术，推动实现数据采集、存储、计算、及流通全流程安全可信，打破数据孤岛，让数据发挥更大价值，[立即了解](introduction/introduction.md)。
+  
+## 快速入口
+
+### 1.1 编译安装
+=== "脚本快速安装"
+    !!! Note "" 
+        PaddleDTX提供了快速搭建测试网络的脚本，通过Docker-Compose一键拉起区块链网络、去中心化存储网络和DAI网络，支持用户本地运行测试。
+
+        &emsp; [快速安装](quickstart/quickstart.md){ .md-button }
+
+=== "源码编译安装"
+    !!! Note "" 
+        正式环境中，用户可以通过源码编译安装，按需搭建业务系统所需的服务。
+
+        &emsp; [编译安装](quickstart/compile-install.md){ .md-button }
+
+=== "Docker安装"
+    !!! Note "" 
+        PaddleDTX提供了镜像构建脚本，用户可以通过build_image.sh构建镜像，使用Docker-compose或K8s启动服务。
+
+        &emsp; [docker安装](quickstart/docker-install.md){ .md-button }
+
+### 1.2 基本操作
+=== "客户端工具"
+    !!! Note "" 
+
+        用户安装完可信分布式AI网络后，即可操作XuperDB、DAI客户端工具进行文件上传、任务发布等。
+
+        &emsp; [立刻体验](quickstart/client.md){ .md-button }
+
+=== "命令行操作"
+    !!! Note "" 
+
+        针对计算需求节点、计算节点、数据持有节点、存储节点等详细命令操作，参考**教程**小节。
+
+        &emsp; [Get Start](tutorial/dai-cmd.md){ .md-button }
 
 
-## 主要特征
-!!! info "PaddleDTX的主要特征如下："
-- 支持多个学习过程并行运行的{++多方安全计算++}框架，集成多种横向联邦学习和纵向联邦学习算法
-- {++安全存储++}高敏感数据，防止隐私泄漏，支持故障容错，抵御存储作弊
-- 去中心化管理存储节点，支持{++无上限++}数据纳管
-- 保证多方数据联合建模的{++全链路可信++}
+### 1.3 业务集成
+=== "API/GRPC API"
+    !!! Note "" 
 
-## 架构概览
-PaddleDTX由多方安全计算网络、去中心化存储网络、区块链网络构建而成。
+        用户可以通过**API、GRPC API**方式将业务系统集成到PaddleDTX，进行训练或预测任务的发布、数据存储、数据共享等，PaddleDTX支持底层区块网络的灵活切换。
 
-<img src='./_static/architecture.png' width = "100%" height = "100%" align="middle"/>
+        &emsp; [Get Start](development/api.md){ .md-button }
 
-### 1.1 多方安全计算网络
-有预测需求的一方为计算需求节点。可获取样本数据进行模型训练和预测的一方为任务执行节点，多个任务执行节点组成一个SMPC（多方安全计算）网络。计算需求节点将任务发布到区块链网络，任务执行节点确认后执行任务。数据持有节点对任务执行节点的计算数据做信任背书。
+=== "项目案例"
+    !!! Note "" 
 
-SMPC是一个支持多个学习过程并行运行的框架，会陆续集成更多纵向联邦学习、横向联邦学习算法。
+        通过测试案例可以评估模型训练、预测的效果，PaddleDTX提供了基于波士顿房价预测的线形回归算法和基于鸢尾花的逻辑回归算法。
 
-### 1.2 去中心化存储网络
-数据持有节点将自己的隐私数据进行加密、切分、副本复制后分发到存储节点，存储节点通过应答数据持有节点的挑战证明自己持有数据分片。通过这些机制，实现了在不泄漏隐私的前提下充分且安全地利用存储资源。
+        &emsp; [Get Start](projectcases/linear.md){ .md-button }
 
-训练样本和预测数据集往往是归属于不同机构的隐私数据。这些机构可以作为数据持有节点加入到去中心化存储网络中，通过多方安全计算网络发挥数据的最大价值。
 
-### 1.3 区块链网络
-训练任务和预测任务通过区块链网络广播到任务执行节点，后者继而执行训练任务和预测任务。数据持有节点和存储节点在副本保持证明、健康状态监控过程中，通过区块链网络实现信息交换。
+## Need Help？
 
-目前，PaddleDTX底层采用的区块链框架是XuperChain。
+通过以下链接联系 PaddleDTX 团队：
+
+<img src='../../_static/discuss.png' width = "5%" height = "5%" align="middle" />
+[社区交流](https://developer.baidu.com/singleTagPage.html?tagId=269&type=QUESTION)  &emsp;
+<img src='../../_static/issue.png' width = "4%" height = "4%" align="middle" />
+[Github Issues](https://github.com/PaddlePaddle/PaddleDTX/issues)
+
+
+<br>
