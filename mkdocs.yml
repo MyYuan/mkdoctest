@@ -1,5 +1,4 @@
 site_name: "PaddleDTX"
-docs_dir: documents
 theme:
   name: 'material'
   logo: _static/logo.png
