@@ -18,7 +18,7 @@ theme:
       toggle:
         icon: material/brightness-7
         name: Switch to light mode
-  language: zh
+  language: zh_CN
   features:
     - navigation.instant
     - navigation.top
