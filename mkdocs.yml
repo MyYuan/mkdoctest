@@ -65,16 +65,16 @@ nav:
       - 项目贡献: 'others/team.md'
       - 加入我们: 'others/join.md'
       - 参考资料: 'others/reference.md'
-extra:
+# extra:
   # version:
   #   provider: mike
-  alternate:
-    - name: 中文
-      link: /
-      lang: ch
-    - name: English
-      link: /en/ 
-      lang: en
+  # alternate:
+  #  - name: 中文
+  #    link: /
+  #    lang: ch
+  #  - name: English
+  #    link: /en/ 
+  #    lang: en
   # generator: false
 copyright: Copyright &copy; 2022 Baidu PaddleDTX
 # Extensions
