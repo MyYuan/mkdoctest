@@ -3,6 +3,10 @@ theme:
   name: 'material'
   logo: _static/logo.png
   favicon: _static/logo.png
+  custom_dir: docs
+  # 404 page
+  static_templates:
+    - 404.html
   icon:
     repo: fontawesome/brands/github
   palette:
