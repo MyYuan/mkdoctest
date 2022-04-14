@@ -18,7 +18,7 @@ theme:
       toggle:
         icon: material/brightness-7
         name: Switch to light mode
-#  language: zh
+  language: zh
   features:
     - navigation.instant
     - navigation.top
@@ -65,17 +65,17 @@ nav:
       - 项目贡献: 'others/team.md'
       - 加入我们: 'others/join.md'
       - 参考资料: 'others/reference.md'
-# extra:
+extra:
   # version:
   #   provider: mike
-  # alternate:
-  #  - name: 中文
-  #    link: /
-  #    lang: ch
-  #  - name: English
-  #    link: /en/ 
-  #    lang: en
-  # generator: false
+  alternate:
+    - name: 中文
+      link: /zh/
+      lang: zh
+    - name: English
+      link: /en/
+      lang: en
+  generator: false
 copyright: Copyright &copy; 2022 Baidu PaddleDTX
 # Extensions
 markdown_extensions:
