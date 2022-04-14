@@ -3,6 +3,7 @@ theme:
   name: 'material'
   logo: _static/logo.png
   favicon: _static/logo.png
+  site_url: https://mkdoctest2.readthedocs.io/zh/latest/
   icon:
     repo: fontawesome/brands/github
   palette:
