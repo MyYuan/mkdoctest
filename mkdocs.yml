@@ -3,7 +3,6 @@ theme:
   name: 'material'
   logo: _static/logo.png
   favicon: _static/logo.png
-  site_url: https://mkdoctest2.readthedocs.io/zh/latest/
   icon:
     repo: fontawesome/brands/github
   palette:
@@ -31,7 +30,7 @@ repo_url: https://github.com/PaddlePaddle/PaddleDTX
 repo_name: PaddlePaddle/PaddleDTX
 edit_uri: tree/master/docs/source/
 nav:
-    - Home: index.md
+    - 概述: index.md
     - 整体介绍:
       - 系统介绍: 'introduction/introduction.md'
       - 基本概念: 'introduction/concepts.md'
@@ -66,17 +65,17 @@ nav:
       - 项目贡献: 'others/team.md'
       - 加入我们: 'others/join.md'
       - 参考资料: 'others/reference.md'
-extra:
-  # version:
-  #   provider: mike
-  alternate:
-    - name: 中文
-      link: /zh/
-      lang: zh
-    - name: English
-      link: /en/
-      lang: en
-  generator: false
+# extra:
+#   version:
+#     provider: mike
+#   alternate:
+#     - name: 中文
+#       link: /zh/
+#       lang: zh
+#     - name: English
+#       link: /en/
+#       lang: en
+#   generator: false
 copyright: Copyright &copy; 2022 Baidu PaddleDTX
 # Extensions
 markdown_extensions:
@@ -105,3 +104,4 @@ markdown_extensions:
   - pymdownx.tilde
 extra_css:
   - stylesheets/extra.css
+
