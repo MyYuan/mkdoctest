@@ -1,12 +1,14 @@
 site_name: "PaddleDTX"
+site_description: "可信分布式AI 区块链网络 去中心化存储"
+docs_dir: source
 theme:
   name: 'material'
   logo: _static/logo.png
   favicon: _static/logo.png
-  custom_dir: docs
+  # custom_dir: source
   # 404 page
-  static_templates:
-    - 404.html
+  # static_templates:
+  #   - 404.html
   icon:
     repo: fontawesome/brands/github
   palette:
@@ -34,52 +36,55 @@ repo_url: https://github.com/PaddlePaddle/PaddleDTX
 repo_name: PaddlePaddle/PaddleDTX
 edit_uri: tree/master/docs/source/
 nav:
-    - 概述: index.md
-    - 整体介绍:
-      - 系统介绍: 'introduction/introduction.md'
-      - 基本概念: 'introduction/concepts.md'
-    - 快速入门:
-      - 快速安装: 'quickstart/quickstart.md'
-      - 源码安装: 'quickstart/compile-install.md'
-      - docker安装: 'quickstart/docker-install.md'
-      - 客户端工具: 'quickstart/client.md' 
-    - 系统详解:
-      - 部署架构: 'details/framework.md'
-      - Distributed AI: 'details/DAI.md'
-      - XuperDB: 'details/XuperDB.md' 
-      - Crypto: 'details/crypto.md'
-    - 业务集成:
-      - NetWorks : 'development/networks.md'
-      - API: 'development/api.md'
-      - GRPC API: 'development/rpc.md'
-    - 教程:
-      - Distributed AI:
-        - 节点配置: 'tutorial/dai-config.md'
-        - 命令行操作: 'tutorial/dai-cmd.md'
-      - XuperDB:
-        - 节点配置: 'tutorial/xdb-config.md'
-        - 命令行操作: 'tutorial/xdb-cmd.md'
-    - 项目案例:
-      - 线性回归 : 'projectcases/linear.md'
-      - 逻辑回归: 'projectcases/logistic.md'
-    - 其他:
-      - ChanageLog : 'others/changelog.md'
-      - 正在进行中: 'others/ongoing.md'
-      - 常见问题Issue: 'others/issues.md'
-      - 项目贡献: 'others/team.md'
-      - 加入我们: 'others/join.md'
-      - 参考资料: 'others/reference.md'
-# extra:
-#   version:
-#     provider: mike
-#   alternate:
-#     - name: 中文
-#       link: /zh/
-#       lang: zh
-#     - name: English
-#       link: /en/
-#       lang: en
-#   generator: false
+  - index.md
+  - 整体介绍:
+    - 系统介绍: 'introduction/introduction.md'
+    - 基本概念: 'introduction/concepts.md'
+  - 快速入门:
+    - 快速安装: 'quickstart/quickstart.md'
+    - 源码安装: 'quickstart/compile-install.md'
+    - docker安装: 'quickstart/docker-install.md'
+    - 客户端工具: 'quickstart/client.md' 
+  - 架构设计:
+    - 部署架构: 'details/framework.md'
+    - Distributed AI: 'details/DAI.md'
+    - XuperDB: 'details/XuperDB.md' 
+    - Crypto: 'details/crypto.md'
+  - 开发手册:
+    - NetWorks : 'development/networks.md'
+    - API: 'development/api.md'
+    - GRPC API: 'development/rpc.md'
+    - Crypto: 'development/crypto.md'
+  - Tutorial:
+    - Distributed AI:
+      - 节点配置: 'tutorial/dai-config.md'
+      - 命令行操作: 'tutorial/dai-cmd.md'
+    - XuperDB:
+      - 节点配置: 'tutorial/xdb-config.md'
+      - 命令行操作: 'tutorial/xdb-cmd.md'
+  - 项目案例:
+    - 线性回归 : 'projectcases/linear.md'
+    - 逻辑回归: 'projectcases/logistic.md'
+    # - 决策树: 'projectcases/decision-trees.md'
+    # - 神经网络: 'projectcases/dnn-paddlefl.md'
+  - 贡献指南: 'others/team.md'
+  - 更多资料:
+    - 开源版本: 'others/changelog.md'
+    - 正在进行中: 'others/ongoing.md'
+    - 视频教程: 'others/video.md'
+    - 参考资料: 'others/reference.md'
+  - 常见问题: 'others/issues.md'
+extra:
+  # version:
+  #   provider: mike
+  alternate:
+    - name: 中文
+      link: /
+      lang: zh
+    - name: English
+      link: https://github.com/PaddlePaddle/PaddleDTX/tree/master/README.md
+      lang: en
+  # generator: false
 copyright: Copyright &copy; 2022 Baidu PaddleDTX
 # Extensions
 markdown_extensions:
@@ -108,4 +113,3 @@ markdown_extensions:
   - pymdownx.tilde
 extra_css:
   - stylesheets/extra.css
-
